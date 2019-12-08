@@ -1,13 +1,11 @@
 # Renamer
 
-Sort and rename all the files in current directory with custom header and with numbers after the header.
-
-This code only works with current directory for now.
+Sort and rename files in specified directory with custom header and with numbers after the header.
 
 ## Getting Started
 
 ```console
-foo@bar:~$ python3 renamer.py
+foo@bar:~$ python3 renamer.py .
 DONE!
 ```
 
@@ -16,6 +14,24 @@ Or if you want with header:
 foo@bar:~$ python3 renamer.py -n "CUSTOM_HEADER"
 DONE!
 ```
+
+If you want to skip caution part:
+```console
+foo@bar:~$ python3 renamer.py -y
+DONE!
+```
+
+By default this program will rename only files with extensions:
+* .txt
+* .png
+* .jpg
+
+However if you want your own extension list, you cant give it by:
+```console
+foo@bar:~$ python3 renamer.py -e "xml yml json"
+DONE!
+```
+
 
 ### Prerequisites
 
