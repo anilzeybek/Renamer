@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import os
 from os.path import isfile, join
 import argparse
@@ -62,11 +64,15 @@ def main():
         rename_files(necessary_files)
         print("DONE!")
     else:
-        print('This will rename every file with extensions:')
+        print('This will rename every file with those extensions:')
         for i in range(len(extensions_list)):
-            print(f'{i}- {extensions_list[i]}')
+            print(f'{i} - {extensions_list[i]}', sep=', ')
 
-        print('Do you want to continue? y/n')
+        print('\nSo following files will be renamed:')
+        for f in necessary_files:
+            print(f)
+
+        print('\nDo you want to continue? y/n')
         selection = input()
 
         if selection == 'y':
